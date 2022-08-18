@@ -8,11 +8,12 @@ console.log('Welcome, ' + userName + " to " + chalk.bgRed("'ARE YOU A MARVEL FAN
 console.log(chalk.yellow("----------------------------------------------"));
 function play(question, answer) {
   var userAnswer = readlineSync.question(question);
-  if (userAnswer === answer) {
+  if (userAnswer.toLowerCase() === answer) {
     score = score + 1;
     console.log(chalk.greenBright("You are Right !"))
   } else {
-    console.log(chalk.red("You are Wrong !"))
+    console.log(chalk.red("You are Wrong !"));
+    console.log(chalk.greenBright("Correct Answer: " + answer));
   }
   console.log("Your score is: " + score);
   console.log(chalk.yellow("----------------------------------------------"));
