@@ -34,3 +34,5 @@ for (let i = 0; i < qA.length; i++) {
   var current = qA[i];
   play(current.question, current.answer)
 }
+
+console.log("Total Score : " + score);
